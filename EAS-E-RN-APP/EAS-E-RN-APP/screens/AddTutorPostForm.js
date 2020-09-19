@@ -6,7 +6,7 @@ import * as firebase from 'firebase'
 import Firebasekeys from './config'
 import 'firebase/firestore';
 const textColor = '#fff'
-const themecolor = '#004AAD'
+const themecolor = '#FF914D'
 if (!firebase.apps.length) {
   firebase.initializeApp(Firebasekeys);
 }
