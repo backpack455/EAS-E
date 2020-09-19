@@ -23,9 +23,15 @@ For the second section, I used native base in order to create my UI and used Wol
 For the third section, I used classpert, course search api in order to create a query system to output results of courses that are found most appealing to the user. For the user interface, I created the designs myself and I user Material-Paper library to retrieve the icons which are being used throughout the app.
 
 For the fourth section, using python and flask we were able to create a page, then embedded into the react native app for usage, to help users create modern and appealing resumes depending on their skills. Unfortuantely, my partner forgot ot write this explanation, since he created this section. He is in a different time zone, and becuase of that he went to sleep already. I am unable to contact him, but he will be awake after the submission deadline has passed. Please email neerbhalgat@gmail.com or joshiom28@gmail.com for questions.
+
+
+## IMPROVEMENTS
+We would like to make an automatic notetaker that automatically converts what the teachers is saying in class to text. this way students dont have to take down notes and accidentally miss important information. We would also like to use sentiment analysis for our resume just to make sure the tone is positive and not neutral or negative.
+
 # How to Run it
 
-Go ahead and download the REACT-NATIVE-APP, not the website just yet. Download it and run expo install inside the root folder. After that, a qr code should show up. Open up your phone and make sure you have the expo app installed from the play store. After that, scan the qr code and it should lead you into the expo app you just downloaded where the project should show up
+
+Go ahead and download the REACT-NATIVE-APP, not the website just yet. Download it and run expo install inside the root folder. After that, a qr code should show up. Open up your phone and make sure you have the expo app installed from the play store. After that, scan the qr code and it should lead you into the expo app you just downloaded where the project should show up. 
 # Things to Watch out For
 Here are some things in the app to watch out for
 # Tutor Post Section
