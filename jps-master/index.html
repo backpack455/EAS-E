@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @font-face {
+      font-family: "Bagnard";
+      src: url("Fonts/Bagnard.otf");
+    }
+    @font-face {
+      font-family: "Calluna";
+      src: url("Fonts/Calluna.otf");
+    }
+    @font-face {
+      font-family: "Neue-Unica-Medium";
+      src: url("Fonts/Neue-Unica-Medium.ttf");
+    }
+    @font-face {
+      font-family: "Neue-Unica-MediumItalic";
+      src: url("Fonts/Neue-Unica-MediumItalic.ttf");
+    }
+    @font-face {
+      font-family: "Neue-Unica-Regular";
+      src: url("Fonts/Neue-Unica-Regular.ttf");
+    }
+    @font-face {
+      font-family: "Neue-Unica-Italic";
+      src: url("Fonts/NeueHaasUnica-Italic.ttf");
+    }
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: #FAF7F2;
+    }
+
+    body {
+            background-image: url("https://clipartstation.com/wp-content/uploads/2018/10/sand-dune-clipart.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;   
+    }
+    /*Nav Bar*/
+    ul {
+        position: absolute;
+      list-style-type: none;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+    }
+    
+    li {
+      float: right;
+    }
+    
+    li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 0px 4px;
+      margin: 14px 58px 14px 3px;
+      font-size: 1.2rem;
+      font-family: "Bagnard";
+      text-decoration: none;
+      transition: border-bottom 100ms ease-in-out;
+    }
+    
+    li a:hover:not(.active) {
+      border-bottom: 5px solid black;
+    }
+    /*end of nav bar*/
+    
+    h1{
+        font-family: "Bagnard";
+        font-size: 5rem;
+        padding: 10px 0px;
+    
+    }
+    .folium-map{
+        border: 2px solid black;
+        padding: 0px 20px;
+        float: left;
+        max-width: 600px;
+        max-height: 500px;
+    
+    }
+    #heatmap-title{
+        font-family: "Bagnard" !important;
+    }
+    
+    h2{
+        font-family: "Bagnard";
+        font-size: 3rem;
+        padding: 10px 0px;
+    
+    }
+    p{
+        font-family: "Neue-Unica-Regular";
+        font-size: 2rem;
+    }
+    /*HOME PAGE*/
+    #home{
+        padding: 10%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/abstract-mountains-02-modern-minimal-contemporary-abstract-terracotta-brown-landscape-studio-grafiikka.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .home-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        flex: 2 1 0;
+        margin: 50px 20px;
+    }
+    .home-img{
+        padding-top: 25%;
+        flex: 1 1 0;
+    }
+    /*END of home page*/
+    
+    /*Fund page*/
+    #donate{
+        background-image: url(https://f4.bcbits.com/img/a3032379634_16.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10px;
+    }
+    #donate-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+    #donate-grid div div:not(.support-button){
+        background-color: rgba(255, 255, 255, .7);
+        margin: 10px;
+        padding: 35px;
+        border: 2px solid black;
+    }
+    #donate img{
+        margin: 10px 0px;
+        width: 100%;
+    }
+    #donate h1{
+        text-align: center;
+        margin-top: 10%;
+        font-size: 4rem;
+    }
+    #donate h3{
+        font-family: "Neue-Unica-Medium";
+        font-size: 1.5rem;
+    }
+    #donate p{
+        font-size: 1rem;
+    }
+    .nav-title{
+        position: absolute; 
+        left: 40px
+    }
+    .support-button{
+        display: table;
+      height: 50px;
+      width: 100%;
+      background-color: #3386C5;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .support-button:hover{
+        background-color: #1D71B0;
+    }
+    .donate-text{
+        color: white;
+        font-family: "Neue-Unica-Medium";
+        display: table-cell;
+        text-decoration: none;
+         vertical-align: middle;
+    }
+    
+    /*END of fund page*/
+    
+    /*Strategies*/
+    #strategies{
+        margin: 5%;
+    }
+    #strategies section{
+        display: flex;
+        flex-direction: row;
+    }
+    #strategies section img{
+        margin-top: 100%;
+        display: inline-block;
+    }
+    #strategies #leftleaf{
+        position: relative;
+        left: 90%;
+    }
+    #strategies #rightleaf{
+        position: relative;
+        right: 90%;
+    }
+    h1{
+        margin-top: 14%;
+        font-size: 4rem;
+        text-align: center;
+    }
+    h2{
+        font-family: "Neue-Unica-Medium";
+    }
+    h2:not(.form-title){
+        position: relative;
+        margin-top: 10%;
+        font-size: 2.5rem;
+    }
+    form img{
+        max-height: 800px;
+    }
+    #strat1{
+        margin: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/assets/2012/02/14430/image1170x530cropped.jpg");
+        width: 800px;
+        height: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    #strat2{
+        margin: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://science.sciencemag.org/content/sci/348/6235/1261071/F1.medium.gif");
+        width: 800px;
+        height: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #strat3{
+        margin: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://assets.weforum.org/article/image/large_Xa50AxM-XWYCM54_epHm1AXfy9tYJhEMh8dwBOx5m7g.jpg");
+        width: 800px;
+        height: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #strat4{
+        margin: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://cdn.downtoearth.org.in/library/large/2019-09-02/0.83580200_1567415424_24.jpg");
+        width: 800px;
+        height: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #strat5{
+        margin: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://steps-centre.org/wp-content/uploads/2019/03/vegetable-production-congo.jpg");
+        width: 800px;
+        height: 350px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    #strategies h3{
+        font-family: "Neue-Unica-Medium";
+        text-align: center;
+        padding: 2% 0%;
+        width: 60%;
+        margin: auto;
+        font-size: 1.5rem;
+    }
+    
+    .highlight{
+        background-color: yellow;
+    }
+    
+    #strategyform{
+        background-color: white;
+        border: 2px solid black;
+        margin: 5%;
+        padding: 3% 0%;
+    }
+    .form-title{
+        margin-bottom: 2%;
+    }
+    
+    form div h2{
+        color: white;
+        text-align: center;
+    }
+    
+    input[type=radio] {
+      opacity: 0;
+      position: fixed;
+      width: 0;
+    }
+    
+    .selectlabel{
+        background-color: rgba(255, 255, 255, .8);
+        padding: 15px 40px;
+        font-family: "Neue-Unica-Medium";
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0);
+        display: block;
+        text-align: center;
+        width: 10%;
+        margin: auto;
+    }
+    
+    form label:hover {
+      background-color: rgba(255, 255, 255, .9);
+    }
+    
+    form input[type="radio"]:checked + label {
+        background-color: #FFEF63;
+        border-color: #FFB800;
+    }
+    
+    input[type = submit]{
+        display: block;
+        margin: 0 auto;
+        border: none;
+        height: 50px;
+        width: 200px;
+        background-color: #62A368;
+        color: white;
+        font-family: "Neue-Unica-Medium";
+        font-size: 1rem;
+    }
+    input[type = submit]:hover {
+        background-color: #4B8851;
+    }
+    /*End of strategies*/
+    
+    /*BLOG*/
+    #blog{
+        margin: 0% 3%;
+    }
+    #posts{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    #posts div div{
+        background-color: rgba(255, 255, 255, .7);
+        border: 2px solid black;
+        margin: 10px;
+        padding: 35px;
+    }
+    #posts img{
+        max-width: 300px;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+        
+    #blog h2 {
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #blog .blog-title{
+        text-align: left;
+    }
+    .blog-location{
+        font-family: "Neue-Unica-Regular";
+        font-size: 1rem;
+    }
+    .blog-time{
+        font-family: "Neue-Unica-Italic";
+        font-size: .9rem;
+        margin-top: 4px;
+    }
+    .blog-body{
+        font-size: 1rem;
+    }
+    .form-popup {
+        display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      border: 3px solid black;
+      z-index: 11;
+    }
+    .apply{
+      width: 600px;
+      top: 20%;
+      left: 29%;
+      border: none;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    .form-title{
+        font-size: 2rem;
+        font-family: "Bagnard";
+        color: black; 
+        padding-top: 10px; 
+        margin: 0px;
+    }
+    
+    .open-button{
+        font-family: "Neue-Unica-Medium", sans-serif;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0px;
+        background-color: #FFEF63;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    .form-container {
+      max-width: 700px;
+      padding: 10px;
+      background-color: white;
+      font-family: "Neue-Unica-Medium", sans-serif;
+    }
+    .slidecontainer {
+      width: 100%;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 23px;
+      height: 24px;
+      border-radius: 20px;
+      background: green;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 23px;
+      height: 24px;
+      border-radius: 20px;
+      background: green;
+      cursor: pointer;
+    }
+    .form-popup button{
+        font-family: "Gilmer-medium", sans-serif;
+        font-size: 1rem;
+    }
+    
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+      font-family: "Neue-Unica-Medium", sans-serif;
+    }
+    
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    .form-container .cancel {
+      background-color: #F15742;
+    }
+    
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    /*End of blog*/
+    
+    /*Advice*/
+    #advice-form{
+        display: block;
+        margin: 0 auto;
+        font-family: "Neue-Unica-Medium";
+    }
+    #advice-submit-button{
+        width: 110px;
+        height: 30px;
+        margin: 10px;
+        border: none;
+        color: white;
+        font-family: "Neue-Unica-Medium";
+        font-size: 1rem;
+        background-color: #C89F02;
+    }
+    #advice-submit-button:hover{
+        background-color: #AA8700;
+    }
+    /*END Of advice*/
+    /*Thanks(for when user submits blog)*/
+    #thanks div{
+        margin: 0px 10%;
+        background-color: #77B17D;
+        text-align: center;
+    }
+    #thanks h1{
+        font-size: 3rem;
+    }
+    #thanks h2{
+        margin: 0;
+        font-size: 2rem;
+    }
+    /*END of thanks*/
+    
+    @media only screen and (max-width: 1000px) {
+        h1{
+            font-size: 3rem;
+            padding: 10px;
+        }
+        h2{
+            font-size: 1.5rem;
+            width: 60%;
+            padding: 10px;
+        }
+        p{
+            font-size: 1rem;
+        }	
+        nav ul{
+            padding: 10px;
+        }
+        nav ul li a{
+            padding: 0px 10px;
+            font-size: 1rem;
+            margin: 14px 8px 14px 3px;
+            left: 0;
+        }
+        #home{
+            flex-direction: column;
+        }
+        .home-img{
+            padding-top: 5%;
+        }
+        #donate-grid, #posts{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #leftleaf, #rightleaf{
+            visibility: hidden;
+        }
+        #strat1, #strat2, #strat3, #strat4, #strat5 {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        #donate-grid, #posts{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        nav ul li a{
+            padding: 0px 5px;
+            font-size: .7rem;
+        }
+        .nav-title{
+            position: relative; 
+            left: 10px
+        }
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {{msg}}
+    {{msg1}}
+    {{msg2}}
+    {{msg3}}
+    {{msg4}}
+    {{msg5}}
+    {{msg6}}
+    {{msg7}}
+    {{msg8}}
+
+    <form action= "{{ url_for('donate') }}" method = "POST">
+        <input type="submit" value="Go to donate page">
+        </form>
+</body>
+</html>
