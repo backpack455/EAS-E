@@ -21,7 +21,7 @@ export default function ResultsScreen({navigation, route}){
     return (
         <ScrollView>
             <View style={styles.card}>
-                <Text style={styles.resultTitle}></Text>
+                <Text style={styles.resultTitle}>Please wait a few moments...</Text>
                 <Image
               style={styles.image}
               source={{
